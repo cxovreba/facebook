@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #f0f2f5;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    margin: 0;
+    font-weight: normal;
+    line-height: 32px;
+    height: 100%;
+}
+
+.dark_mode {
+    background: #1c1e21;
+    color:  #fff;
+}
+
+#dark_mode {
+    width: 55px;
+    margin-inline: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    border: 0;
+    background-color: #1c1e21;
+    color: #fff;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    gap: 1100px;
+}
+
+.logo1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.facebook_logo {
+    width: 50px;
+}
+
+.search {
+    height: 30px;
+    border-radius: 20px;
+    border: 0;
+    padding-inline: 10px;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-name {
+    font-size: 20px;
+    line-height: 48px;
+    font-weight: bold;
+    color: #3c4858;
+}
+
+.status_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.status_input {
+    display: flex;
+    gap: 10px;
+}
+
+.profile {
+    width: 50px;
+}
+
+#input {
+    width: 400px;
+    border-radius: 30px;
+    border: 0;
+    padding-inline: 10px;
+}
+
+.rectangle {
+    border-bottom: 2px solid #dadde1;
+    display: flex;
+    width: 445px;
+}
+
+.add {
+    display: flex;
+    gap: 10px;
+}
+
+.tag {
+    display: flex;
+    gap: 5px;
+    font-size: 10px;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+}
+
+span {
+    font-weight: bold;
+}
+
+.popup {
+    display: none;
+    flex-direction: column;
+    width: 500px;
+    background: #f0f2f5;
+    padding: 20px;
+    gap: 20px;
+    position: relative;
+    position: absolute;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3c4858;
+    font-size: 20px;
+    position: relative;
+}
+
+#close {
+    position: absolute;
+    right: 0px;
+    top: -5px;
+    cursor: pointer;
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    border: 0;
+}
+
+.rectangle1 {
+    border-bottom: 2px solid #dadde1;
+    display: flex;
+    width: 500px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+}
+
+.profile-area {
+    display: flex;
+    gap: 10px;
+}
+
+#input_status {
+    height: 100px;
+    width: 470px;
+    border: 0;
+    font-size: 20px;
+    outline: none;
+    background: #f0f2f5;
+}
+
+.adding {
+    display: flex;
+    justify-content: space-between;
+    color: #3c4858;
+
+}
+
+#post {
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    line-height: 48px;
+    padding: 0 16px;
+    width: 460px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #1877f2;
+}
