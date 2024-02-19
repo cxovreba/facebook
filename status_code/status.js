@@ -36,3 +36,56 @@ input.addEventListener('focusin', () => {
 closePopup.addEventListener('click', () => {
     popup.style.display = "none";
 })
+
+const post = document.getElementById('post');
+const ul = document.getElementById('ul');
+
+const data = localStorage.getItem('data');
+let list = data ? JSON.parse(data) : [];
+
+function generateStatus() {
+    if (list.length) { 
+        ul.innerHTML = '';
+        list.forEach((el, i) => {
+            const li = document.createElement("li");
+            li.innerHTML = `
+                <div class="status">
+                    <div class="top_info">
+                        <img class="profile" src="../icon/profile.png" alt="Profile picture">
+                        <div class="profile-name">giorgi tskhovrebashvili</div>
+                        <button class="delete-btn">X</button>
+                    </div>
+                    <div class="text">${el.value}</div>
+                </div>
+            `;
+            ul.appendChild(li);
+
+            const deleteBtn = li.querySelector('.delete-btn');
+            deleteBtn.addEventListener('click', () => {
+                list.splice(i, 1);
+                localStorage.setItem('data', JSON.stringify(list));
+                generateStatus();
+                updateStorage(list);
+            });
+        });
+        return;
+    }
+    ul.innerHTML = '';
+}
+
+generateStatus();
+
+post.addEventListener('click', () => {
+    let { value } = document.getElementById('input_status');
+    document.getElementById('input_status').value = '';
+    list.push({ value });
+    updateStorage(list);
+    generateStatus();
+    popup.style.display = "none";
+
+    console.log(list);
+})
+
+function updateStorage(list) {
+    localStorage.setItem('data', JSON.stringify(list));
+};

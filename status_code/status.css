@@ -193,3 +193,25 @@ span {
     font-weight: bold;
     background-color: #1877f2;
 }
+
+li {
+    list-style: none;
+}
+
+.top_info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete-btn {
+    cursor: pointer;
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    border: 0;
+}
+
+.text {
+    margin-block: 20px;
+}
