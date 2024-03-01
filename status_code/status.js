@@ -48,16 +48,22 @@ function generateStatus() {
         ul.innerHTML = '';
         list.forEach((el, i) => {
             const li = document.createElement("li");
-            li.innerHTML = `
+            const savedData = localStorage.getItem('user');
+            if (savedData) {
+                const signUpData = JSON.parse(savedData);
+                let userName = `${signUpData.firstName}  ${signUpData.lastName}`;
+                li.innerHTML = `
                 <div class="status">
                     <div class="top_info">
                         <img class="profile" src="../icon/profile.png" alt="Profile picture">
-                        <div class="profile-name">giorgi tskhovrebashvili</div>
+                        <div class="profile-name">${userName}</div>
                         <button class="delete-btn">X</button>
                     </div>
                     <div class="text">${el.value}</div>
                 </div>
             `;
+            }
+            
             ul.appendChild(li);
 
             const deleteBtn = li.querySelector('.delete-btn');

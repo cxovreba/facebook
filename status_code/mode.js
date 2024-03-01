@@ -6,7 +6,7 @@ export function mode_change() {
         const input = document.getElementById('input');
         const popup = document.querySelector('.popup');
         const secondInput = document.getElementById('input_status');
-        const fullName = document.querySelector('.profile-name');
+        const fullName = document.querySelectorAll('.profile-name');
         const word = document.querySelector('.word');
         const word1 = document.querySelector('.word1');
 
@@ -24,8 +24,10 @@ export function mode_change() {
             word.style.color = '#fff';
             word1.style.background = '#1c1e21';
             word1.style.color = '#fff';
-            fullName.style.background = '#1c1e21';
-            fullName.style.color = '#fff';
+            fullName.forEach(item => {
+                item.style.background = '#1c1e21';
+                item.style.color = '#fff';
+            });
         } else {
             dark_mode.textContent = 'Dark';
             dark_mode.style.background = '#1c1e21';
@@ -40,8 +42,10 @@ export function mode_change() {
             word.style.color = '#1c1e21';
             word1.style.background = '#f0f2f5';
             word1.style.color = '#1c1e21';
-            fullName.style.background = '#f0f2f5';
-            fullName.style.color = '#1c1e21';
+            fullName.forEach(item => {
+                item.style.background = '#f0f2f5';
+                item.style.color = '#1c1e21';
+            });
         }
     });
 }
